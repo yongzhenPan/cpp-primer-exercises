@@ -1,0 +1,60 @@
+3.16:
+    int count = 0;
+	string s;
+	vector<string> svec;
+	while (count<5 && cin >> s)
+	{
+		svec.push_back(s);  ++count;
+	}
+	for (auto &i : svec)
+	{
+		for (auto &c : i)
+		{
+			c = toupper(c);
+		}
+		cout << i << endl;
+	}
+  
+  
+3.19:
+    还是使用先创建一个空的vector<int>对象，再往里面push_back()10个42比较好
+    
+3.20：
+  int n = 0,count=0;
+	vector<int> ivec;
+	while (count<6 && cin >> n)
+	{
+		ivec.push_back(n); ++count;
+	}
+	auto num = ivec.size();
+	for (decltype(ivec.size()) i = 0; i < num - 1; ++i)
+	{
+		cout << ivec[i] + ivec[i + 1] << " ";
+	}
+  
+3.22:
+  vector<string> text;
+	text.push_back("sdhfdhfdjskfsh");
+	text.push_back("");
+	text.push_back("dff");
+
+	for (auto it = text.begin(); it != text.end() && (*it) != ""; ++it)
+	{
+		for (auto &i : *it)
+		{
+			i = toupper(i);
+		}
+	}
+
+	for (auto i : text)
+		cout << i << " ";
+    
+3.23:
+  vector<int> ivec;
+	for (int i = 0; i < 10; ++i)
+		ivec.push_back(i);
+	for (auto &i : ivec)
+	{
+		i = i * 2;
+		cout << i << " ";
+	}
