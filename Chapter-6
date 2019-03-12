@@ -1,0 +1,10 @@
+6.27:
+    int sum(initializer_list<int> i1)
+{
+	int sum_int = 0;
+	for ( auto &i : i1)
+	{
+		sum_int += i;
+	}
+	return sum_int;
+}
